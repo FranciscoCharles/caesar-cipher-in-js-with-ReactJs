@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import TextAreaComponent from './textarea'
 import InputNumber from './input_number'
-import { cesars_cipher, total_keys } from '../cesars_cipher'
+import { caesars_cipher, total_keys } from '../caesars_cipher'
 
 const Container = styled.div`
 
@@ -45,7 +45,7 @@ function MyComponent() {
 	}
 
 	useEffect(() => {
-		setResult(() => (text) ? cesars_cipher(text, shift) : '')
+		setResult(() => (text) ? caesars_cipher(text, shift) : '')
 	}, [text, shift])
 
 	return (
