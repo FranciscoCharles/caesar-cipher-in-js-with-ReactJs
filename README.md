@@ -1,7 +1,7 @@
 # 
 
 <p align="center">
-  <h1>Simple Caesar-cipher-in-js-with-ReactJs</h1>
+  <h1>Simple Caesar cipher in js with ReactJS ⚛️</h1>
   <h6>by <i>FranciscoCharles</i></h6>
 </p>
 
