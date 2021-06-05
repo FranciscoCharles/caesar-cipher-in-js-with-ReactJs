@@ -5,7 +5,7 @@
   <h6>by <i>FranciscoCharles</i></h6>
 </p>
 
-an example to learn about React hooks and an implementation of the Caesar cipher for didactic purposes.
+an example to learn about **React hooks** and an implementation of the Caesar cipher for didactic purposes.
 
 <p align="center">
     <img src="screen.png">
