@@ -5,10 +5,10 @@ import { getInputValue, emptyFunction } from '../util'
 
 const Label = styled.label`
   display: inline-block;
-	width: 5rem;
+	width: auto;
 	height: 1.25rem;
-	padding-right: 0.625rem;
-	font-size: 1.25rem;
+	padding-right: 0.5rem;
+	font-size: 1.6rem;
 	text-align: left;
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
@@ -16,20 +16,16 @@ const Label = styled.label`
 
 const TextArea = styled.textarea`
 	
-	width: 100%;
-	height: 120px;
-	font-size: 1.625rem;
+	width: 70vw;
+	height: 20vh;
+	font-size: 1.8rem;
 	font-family: Arial, Helvetica, sans-serif;
-	border-radius: 20px;
-	padding-left:0px;
-	padding-left:0px;
-	margin-right:0px;
-	margin-right:0px;
-	
+	border-radius: 2rem;
+
 	:focus{
 		outline: none;
-		border-width: 2px;
-		border-radius: 20px;
+		border-width: 0.2rem;
+		border-radius: 2rem;
 	}
 `;
 const Div = styled.div`
@@ -38,8 +34,8 @@ const Div = styled.div`
 	flex-direction: column;
 	
 	${Label}{
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 `;
 

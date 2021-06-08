@@ -7,19 +7,22 @@ import { caesars_cipher, total_keys } from '../caesars_cipher'
 const Container = styled.div`
 
 	position: absolute;
-	width: 40%;
-	height: 80%;
 	left: 50%;
 	top: 50%;
   transform: translate(-50%, -50%);
+
+	width: auto;
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	border: 0.125rem solid black;
 	border-radius: 1.25rem;
 	background-color: white;
 	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	padding: 1rem 1rem 1rem 1rem;
 `;
 
 function copyToClipboard(text) {

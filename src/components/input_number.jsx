@@ -6,22 +6,22 @@ import { getInputValue } from '../util'
 
 const InputNumberStyled = styled.div`
 
-	margin-top: 10px;
-	margin-bottom: 10px;
+margin-top: 1rem;
+	margin-bottom: 1rem;
 	display: grid;
 	
-	height: 40px;
-	grid-template-columns: 30px 30px;
+	height: 4rem;
+	grid-template-columns: 3rem 3rem;
 	grid-template-areas: "input btn1" "input btn2";
 
 	& button{
-		height:20px;
-		width: 30px;
+		height:2rem;
+		width: 3rem;
 		align-items: center;
 	}
 
 	& :nth-child(1){
-		font-size: 16px;
+		font-size: 1.6rem;
 		text-align: center;
 		grid-area: input;
 	}
