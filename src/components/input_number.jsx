@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { getInputValue } from '../../util'
+import { getInputValue } from '../util'
 
 const InputNumberStyled = styled.div`
 
