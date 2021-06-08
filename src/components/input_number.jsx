@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -34,33 +34,58 @@ const InputNumberStyled = styled.div`
 `;
 
 export default function InputNumber(props) {
+
+	let [value, setValue] = useState(props.value)
+
 	function handleChange(value) {
-		let regex = /^[-+]?[\d]+$/
+		let regex = /^(|[-+]?[\d]+)$/
 		if (regex.test(value)) {
-			let number = parseInt(value)
-			if (number < props.min) {
-				props.onChange(props.min)
-			} else if (number >= props.max) {
-				props.onChange(props.max)
-			} else {
-				props.onChange(number)
+			if (value !== '') {
+				value = getValue(value)
+				props.onChange(value)
 			}
+			setValue(() => value)
+		} else {
+			setValue(() => props.value)
 		}
 	}
 	function increment() {
-		if (props.value < props.max) {
-			props.onChange(props.value + 1)
+		let number = getValue(value)
+		if (number < props.max) {
+			number += 1
+			setValue(() => number)
+			props.onChange(number)
 		}
 	}
 	function decrement() {
-		if (props.value > props.min) {
-			props.onChange(props.value - 1)
+		let number = getValue(value)
+		if (number > props.min) {
+			number -= 1
+			setValue(() => number)
+			props.onChange(number)
 		}
 	}
-
+	function getValue(value) {
+		if (value === '') {
+			return props.value
+		}
+		let number = parseInt(value)
+		if (number < props.min) {
+			return props.min
+		}
+		if (number >= props.max) {
+			return props.max
+		}
+		return number
+	}
+	function handleBlur() {
+		let number = getValue(value)
+		props.onChange(number)
+		setValue(() => number)
+	}
 	return (
 		<InputNumberStyled>
-			<input type="text" value={props.value} onChange={getInputValue(handleChange)} />
+			<input type="text" onBlur={handleBlur} value={value} onChange={getInputValue(handleChange)} />
 			<button onClick={increment} >&#9650;</button>
 			<button onClick={decrement} >&#9660;</button>
 		</InputNumberStyled>
