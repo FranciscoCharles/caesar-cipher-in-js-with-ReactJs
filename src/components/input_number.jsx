@@ -6,17 +6,15 @@ import { getInputValue } from '../util'
 
 const InputNumberStyled = styled.div`
 
-margin-top: 1rem;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
 	display: grid;
-	
-	height: 4rem;
-	grid-template-columns: 3rem 3rem;
+	width: auto;
+	height: auto;
+	grid-template-columns: minmax(1rem,4rem) minmax(1rem,3rem);
 	grid-template-areas: "input btn1" "input btn2";
 
 	& button{
-		height:2rem;
-		width: 3rem;
 		align-items: center;
 	}
 

@@ -18,11 +18,31 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	border: 0.125rem solid black;
 	border-radius: 1.25rem;
 	background-color: white;
 	
-	padding: 1rem 1rem 1rem 1rem;
+	padding: 0 1rem 1rem 1rem;
+
+	@media screen and (max-height: 414px){
+
+		padding: 0 1rem 1rem 1rem;
+		margin-bottom: 0;
+    margin-top: 0;
+
+		div textarea{
+			height: 15vh;
+		}
+		
+	}
+	@media screen and (max-height: 304px){
+		
+		div textarea{
+			
+			height: 10vh;
+			margin-bottom: 0;
+    	margin-top: 0;
+		}
+	}
 `;
 
 function copyToClipboard(text) {
